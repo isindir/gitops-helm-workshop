@@ -4,7 +4,7 @@ metadata:
   name: nginx-ingress
   namespace: ingress-nginx
   annotations:
-    fluxcd.io/ignore: "true"
+    fluxcd.io/ignore: "false"
 spec:
   releaseName: nginx-ingress
   chart:
@@ -14,6 +14,11 @@ spec:
   values:
     controller:
       service:
-        type: LoadBalancer
+       type: NodePort
+       nodePorts:
+         http: 32080
+         https: 32443
+         tcp:
+           8080: 32808
       metrics:
         enabled: false
