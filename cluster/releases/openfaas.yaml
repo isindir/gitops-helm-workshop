@@ -14,6 +14,7 @@ spec:
   chart:
     repository: https://openfaas.github.io/faas-netes
     name: openfaas
+    version: 5.3.7
   values:
     basic_auth: false
     functionNamespace: openfaas-fn
