@@ -1,0 +1,16 @@
+---
+apiVersion: openfaas.com/v1alpha2
+kind: Function
+metadata:
+  name: exp2csv
+  namespace: openfaas-fn
+spec:
+  name: exp2csv
+  image: isindir/exp2csv:0.0.3
+  imagePullPolicy: IfNotPresent
+  labels:
+    com.openfaas.scale.factor: "0"
+  requests:
+    memory: ""
+    cpu: 10m
+
