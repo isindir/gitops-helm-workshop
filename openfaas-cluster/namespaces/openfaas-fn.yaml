@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: openfaas-fn
+  labels:
+    role: openfaas-fn
+    #linkerd.io/inject: enabled
+    #istio-injection: enabled

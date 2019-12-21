@@ -1,0 +1,17 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: sops-secrets-operator
+  namespace: sops
+  annotations:
+    fluxcd.io/ignore: "false"
+spec:
+  releaseName: sops-secrets-operator
+  chart:
+    git: git@github.com:isindir/sops-secrets-operator
+    ref: master
+    path: chart/sops-secrets-operator
+  values:
+    gpg:
+      enabled: true
