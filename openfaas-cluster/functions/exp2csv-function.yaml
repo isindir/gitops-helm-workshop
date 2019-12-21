@@ -11,6 +11,6 @@ spec:
   labels:
     com.openfaas.scale.factor: "0"
   requests:
-    memory: ""
+    memory: 50Mi
     cpu: 10m
 
