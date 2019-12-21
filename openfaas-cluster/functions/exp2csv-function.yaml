@@ -3,16 +3,14 @@ apiVersion: openfaas.com/v1alpha2
 kind: Function
 metadata:
   name: exp2csv
-  namespace: openfaas-fn
 spec:
   name: exp2csv
   image: cloud.canister.io:5000/isindir/exp2csv:0.0.1
-  imagePullSecrets:
-  - name: canister-login
-  imagePullPolicy: IfNotPresent
   labels:
     com.openfaas.scale.factor: "0"
   requests:
     memory: 50Mi
     cpu: 10m
+  secrets:
+  - canister-login
 
