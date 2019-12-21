@@ -5,7 +5,7 @@ metadata:
   name: exp2csv
 spec:
   name: exp2csv
-  image: cloud.canister.io:5000/isindir/exp2csv:0.0.1
+  image: cloud.canister.io:5000/isindir/exp2csv:0.0.2
   labels:
     com.openfaas.scale.factor: "0"
   requests:
