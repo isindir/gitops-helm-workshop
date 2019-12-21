@@ -18,3 +18,5 @@ spec:
     operator:
       create: true
 
+    faasnetes:
+      imagePullPolicy: "IfNotPresent"
