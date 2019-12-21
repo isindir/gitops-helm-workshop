@@ -11,6 +11,6 @@ spec:
   requests:
     memory: 50Mi
     cpu: 10m
-  secrets:
-  - canister-login
+  #secrets:
+  #- canister-login
 
