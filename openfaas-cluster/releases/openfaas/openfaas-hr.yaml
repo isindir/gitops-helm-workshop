@@ -14,9 +14,23 @@ spec:
     version: 5.3.7
   values:
     basic_auth: false
-    functionNamespace: openfaas-fn
+    exposeServices: false
+
     operator:
       create: true
 
     faasnetes:
       imagePullPolicy: "IfNotPresent"
+
+    faasIdler:
+      dryRun: false
+
+    ingress:
+      enabled: true
+      hosts:
+        - host: gateway.127.0.0.1.nip.io
+          serviceName: gateway
+          servicePort: 8080
+          path: /
+      annotations:
+        kubernetes.io/ingress.class: nginx
