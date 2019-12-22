@@ -28,7 +28,7 @@ spec:
     ingress:
       enabled: true
       hosts:
-        - host: gateway.127.0.0.1.nip.io
+        - host: gateway.127.0.0.1.floeberg.ltd
           serviceName: gateway
           servicePort: 8080
           path: /
